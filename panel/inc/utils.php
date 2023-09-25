@@ -206,14 +206,17 @@ function error404()
 	header('HTTP/1.1 404 Not Found', TRUE, 404);
 	echo <<<HTML
 	<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-	<HTML><HEAD>
-	<TITLE>404 Not Found</TITLE>
-	</HEAD><BODY>
-	<H1>Not Found</H1>
+	<html>
+	<head>
+	<title>404 Not Found</title>
+	</head>
+	<body>
+	<h1>Not Found</h1>
 	The requested URL $_SERVER[REQUEST_URI] was not found on this server.
-	<HR>
+	<hr>
 	<I>$_SERVER[HTTP_HOST]</I>
-	</BODY></HTML>
+	</body>
+	</html>
 HTML;
 	echo str_repeat ("\r\n", 50);
 	exit();
