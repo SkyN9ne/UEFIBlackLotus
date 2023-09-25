@@ -1,13 +1,13 @@
 # BlackLotus
-BlackLotus is an innovative UEFI Bootkit designed specifically for Windows. It incorporates a built-in Secure Boot bypass and Ring0/Kernel protection to safeguard against any attempts at removal. This software serves the purpose of functioning as an HTTP Loader. Thanks to its robust persistence, there is no necessity for frequent updates of the Agent with new encryption methods. Once deployed, traditional antivirus software will be incapable of scanning and eliminating it. The software comprises two primary components: the Agent, which is installed on the targeted device, and the Web Interface, utilized by administrators to manage the bots. In this context, a bot refers to a device equipped with the installed Agent.
+BlackLotus is an innovative UEFI Bootkit designed specifically for Windows. It incorporates a built-in Secure Boot bypass and Ring-0 / Kernel-mode protection to safeguard against any attempts at removal. This software serves the purpose of functioning as an HTTP Loader. Thanks to it's robust persistence, there is no necessity for frequent updates of the Agent with new encryption methods. Once deployed, traditional antivirus software will be incapable of scanning and / or removing it. The software comprises two primary components: the Agent, which is installed on the targeted device, and the Web Interface, utilized by C&C Administrators to manage the bots. In this context, a bot refers to a device equipped with the installed Agent.
 
-**FYI**: This version of BlackLotus (v2) has removed baton drop, and replaced the original version SHIM loaders with bootlicker. UEFI loading, infection and post-exploitation persistence are all the same.
+**FYI**: This version of BlackLotus (v2) has removed baton drop, and replaced the original version SHIM loaders with ```bootlicker```. UEFI loading, infection and post-exploitation persistence are all the same.
 
 ## General
 - Written in C and x86asm
-- Utilizes on Windows API, NTAPI, EFIAPI (NO 3rd party libraries used),
+- Utilizes only Windows API, NTAPI, EFIAPI (NO 3rd party libraries used),
 - NO CRT (C Runtime Library).
-- Compiled binary including the user-mode loader is only 80kb in size
+- Compiled binary including the user-mode loader is only 80kB in size
 - Uses secure HTTPS C2 communication by using RSA and AES encryption
 - Dynamic configuration
 
@@ -25,8 +25,8 @@ BlackLotus is an innovative UEFI Bootkit designed specifically for Windows. It i
 - Modular plugin system
 
 
-Setup by modifying the config.c file by including your C2s hostname or IP address.
-After that compliation should be easy, just keep the included settings in the Visual Studio solution.
+Setup by modifying the ```config.c``` file by including your C2's hostname or IP address.
+After that compliation should be easy, just keep the included settings in the Visual Studio Solution.
 
 ## Default Panel Credentials:
 
