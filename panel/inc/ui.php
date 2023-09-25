@@ -2,7 +2,7 @@
 function ui_start($title)
 {
 ?>
-<!doctype HTML>
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>NzT - <?php echo($title); ?></title>
